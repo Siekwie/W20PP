@@ -6,7 +6,6 @@ Superior Solution: A header-only C++20/23 framework that:
 
 - Wraps WinUI 3 with pure RAII (no macros, no exceptions)
 - Provides declarative UI syntax using C++20 designated initializers
-- Compiles 10x faster than Qt (no MOC preprocessing)
 - Single-header distribution (<5MB) with zero external dependencies
 - Built-in dark mode( Theme possibility ), DPI awareness, and accessibility
 
