@@ -1,0 +1,26 @@
+[
+  {
+    "directory": "C:/Users/bruce/Documents/DEV/AA_CPP/W20PP",
+    "arguments": [
+      "clang++",
+      "--target=x86_64-pc-windows-msvc",
+      "-std=c++23",
+      "-DWIN32",
+      "-D_WINDOWS",
+      "-D_CRT_SECURE_NO_WARNINGS",
+      "-isystem",
+      "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/include",
+      "-isystem",
+      "C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/ucrt",
+      "-isystem",
+      "C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/shared",
+      "-isystem",
+      "C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um",
+      "-fms-compatibility",
+      "-fms-extensions",
+      "-c",
+      "src/main.cpp"
+    ],
+    "file": "src/main.cpp"
+  }
+]

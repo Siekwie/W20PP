@@ -1,0 +1,5 @@
+.cache
+.vscode
+/docs
+/build
+initREPO.sh

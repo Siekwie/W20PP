@@ -1,0 +1,23 @@
+CompileFlags:
+  Add:
+    - -std=c++23
+    - -Wall
+    - -Wextra
+    - -Wno-unused-parameter
+    - -Wno-missing-declarations
+    - -DWIN32_LEAN_AND_MEAN
+    - -DUNICODE
+    - -D_UNICODE
+    - -I${workspaceFolder}/include
+    # Windows SDK paths
+    - -IC:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/shared
+    - -IC:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um
+    - -IC:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/ucrt
+
+Diagnostics:
+  UnusedIncludes: None
+  MissingIncludes: None
+  ClangTidy:
+    Remove:
+      - modernize-*
+      - readability-*
