@@ -1,10 +1,22 @@
 # W20PP Examples
 
-# Basic window example (Windows GUI application)
-add_executable(basic_window WIN32 basic_window.cpp)
-target_link_libraries(basic_window PRIVATE W20PP::W20PP)
+# Helper function to add examples
+function(add_w20pp_example name)
+    # Windows GUI application
+    add_executable(${name} WIN32 ${name}.cpp)
+    target_link_libraries(${name} PRIVATE W20PP::W20PP)
+    
+    # Console version (for debugging with console output)
+    add_executable(${name}_console ${name}.cpp)
+    target_compile_definitions(${name}_console PRIVATE _CONSOLE)
+    target_link_libraries(${name}_console PRIVATE W20PP::W20PP)
+endfunction()
 
-# Console example (for debugging with console output)
-add_executable(basic_window_console basic_window.cpp)
-target_compile_definitions(basic_window_console PRIVATE _CONSOLE)
-target_link_libraries(basic_window_console PRIVATE W20PP::W20PP)
+# Phase 1: Basic Examples
+add_w20pp_example(basic_window)
+
+# Phase 2: Window Management & Lifecycle Examples
+add_w20pp_example(event_handling)
+add_w20pp_example(window_features)
+add_w20pp_example(multi_monitor)
+add_w20pp_example(custom_window_class)
